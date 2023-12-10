@@ -3937,11 +3937,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\Hardware4You.csproj",
+      "projectUniqueName": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\Hardware4You.csproj",
       "projectName": "Hardware4You",
-      "projectPath": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\Hardware4You.csproj",
+      "projectPath": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\Hardware4You.csproj",
       "packagesPath": "C:\\Users\\janah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\obj\\",
+      "outputPath": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\janah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3964,9 +3964,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "default"
       }
     },
     "frameworks": {

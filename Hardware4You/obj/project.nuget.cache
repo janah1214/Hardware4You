@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y4bMhOuN0ccUXzYn/c9JbzPohB0eu9kTONA1WEsu+cc1hXz6K55TlOQgNyjtOSjKpx3eZiZhla/P3GhlxnKVVA==",
+  "dgSpecHash": "NL2hTyjD1tb3RYm1l0clnAoAkH/lvjGXjdVjMd0E5mCLvyi3TqOa4MwoVT6uE/664ojqUX8jadiOx2gIpi/9eg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\Hardware4You.csproj",
+  "projectFilePath": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\Hardware4You.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\janah\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\janah\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

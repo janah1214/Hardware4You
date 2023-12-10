@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "te9yR4zI0sioBQHqeddhAylu24QX+/Te2BFSdvnhLZw=",
+  "Hash": "C8KeezCBiDW9VOF5StnFfPVrRugp32pU92MLmC//2bk=",
   "Source": "Hardware4You",
   "BasePath": "_content/Hardware4You",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "Hardware4You\\wwwroot",
       "Source": "Hardware4You",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "Pattern": "**"
     }
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.2.7\\staticwebassets\\scripts\\splitbuttonsbase.min.js"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Hardware4You.styles.css",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Hardware4You.styles.css",
       "SourceId": "Hardware4You",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "Hardware4You.styles.css",
       "AssetKind": "All",
@@ -1002,13 +1002,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Hardware4You.styles.css"
+      "OriginalItemSpec": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Hardware4You.styles.css"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Hardware4You.bundle.scp.css",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Hardware4You.bundle.scp.css",
       "SourceId": "Hardware4You",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "Hardware4You.bundle.scp.css",
       "AssetKind": "All",
@@ -1021,13 +1021,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Hardware4You.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Hardware4You.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\site.css",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\favicon.png",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\janah\\source\\repos\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
       "BasePath": "_content/Hardware4You",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
