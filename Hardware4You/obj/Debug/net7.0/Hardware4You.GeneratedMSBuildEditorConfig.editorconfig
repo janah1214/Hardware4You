@@ -38,6 +38,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Shared/Beamer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJlYW1lci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Shared/Ipad.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXElwYWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Shared/Iphone.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXElwaG9uZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Shared/Macbook.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1hY2Jvb2sucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Shared/Monitor.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1vbml0b3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Shared/PC.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBDLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
