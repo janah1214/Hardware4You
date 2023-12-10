@@ -276,3 +276,13 @@ C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\Hardware4Y
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\ref\Hardware4You.dll
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\scopedcss\Layout\MainLayout.razor.rz.scp.css
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\scopedcss\Layout\NavMenu.razor.rz.scp.css
+C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Microsoft.Extensions.Localization.dll
+C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Microsoft.JSInterop.dll
+C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\MudBlazor.dll

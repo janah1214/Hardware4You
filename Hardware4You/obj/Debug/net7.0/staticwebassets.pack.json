@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\Hardware4You.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\Logo.png",
+      "PackagePath": "staticwebassets\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\Logo.svg",
+      "PackagePath": "staticwebassets\\Logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
       "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
@@ -49,12 +61,12 @@
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
       "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\logo_weiss.png",
+      "PackagePath": "staticwebassets\\logo_weiss.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Hardware4You.Microsoft.AspNetCore.StaticWebAssets.props",

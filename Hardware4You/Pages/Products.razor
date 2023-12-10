@@ -1,11 +1,13 @@
 ﻿@page "/products"
 
-<PageTitle>Product</PageTitle>
-
 @using Hardware4You.Data
 @using Syncfusion.Blazor.Grids
 @inject IProductService ProductService
 
+<PageTitle>Products</PageTitle>
+
+<h3>Products</h3>
+<br />
 <SfGrid DataSource="@HardwareProducts" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" TValue="Product">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Product"></GridEvents>
@@ -17,7 +19,7 @@
 </SfGrid>
 
 @code {
-    public IEnumerable<Product> HardwareProducts { get; set; }
+    public IEnumerable<Product> HardwareProducts { get; set; } = null!;
 
     protected override void OnInitialized()
     {

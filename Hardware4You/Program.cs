@@ -2,9 +2,12 @@ using Hardware4You.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
+using MudBlazor.Services;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddMudServices();
 
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddDbContext<ProductContext>(option =>
