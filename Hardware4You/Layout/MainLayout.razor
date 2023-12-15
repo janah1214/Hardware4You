@@ -1,4 +1,5 @@
-﻿@inherits LayoutComponentBase
+﻿@using MudBlazor
+@inherits LayoutComponentBase
 <div class="page">
     <div class="sidebar">
         <NavMenu />
@@ -6,9 +7,18 @@
 
     <main>
         <div class="top-row px-4">
+            <!--TODO: darstellung titel, logo, icons-->
             Hardware4You
-
             <a href=""><img src="logo.png" style="height:30px" /></a>
+
+            <!--TODO: remove-->
+            <div style="width: 100px"></div>
+            
+            <MudIcon Icon="@Icons.Material.Filled.SettingsSuggest" Title="Einstellungen" />
+            <MudIcon Icon="@Icons.Material.Filled.Info" Title="Info" />
+            <MudIcon Icon="@Icons.Material.Filled.ShoppingCartCheckout" Title="Warenkorb" />
+            <MudIcon Icon="@Icons.Material.Filled.Login" Title="Einloggen" />
+            <MudIcon Icon="@Icons.Material.Filled.Logout" Title="Abmelden" />
         </div>
 
         <article class="content px-4">
