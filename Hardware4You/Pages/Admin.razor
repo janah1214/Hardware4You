@@ -1,6 +1,7 @@
-﻿@page "/products"
+﻿@page "/admin"
 
 @using Hardware4You.Data
+@using Hardware4You.Models
 @using Syncfusion.Blazor.Grids
 @inject IProductService ProductService
 
@@ -13,8 +14,12 @@
     <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Product"></GridEvents>
     <GridColumns>
         <GridColumn Field="@nameof(Product.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
-        <GridColumn Field="@nameof(Product.Name)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Product.Price)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Product.Name)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Product.Description)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Product.ImageURL)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Product.Price)" Width="50"></GridColumn>
+        <GridColumn Field="@nameof(Product.Qty)" Width="50"></GridColumn>
+        <GridColumn Field="@nameof(Product.CategoryId)" Width="50"></GridColumn>
     </GridColumns>
 </SfGrid>
 

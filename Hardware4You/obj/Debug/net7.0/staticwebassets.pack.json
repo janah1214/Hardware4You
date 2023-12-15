@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Hardware4You.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\Images\\macbook.jpg",
+      "PackagePath": "staticwebassets\\Images\\macbook.jpg"
+    },
+    {
       "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\Logo.png",
       "PackagePath": "staticwebassets\\Logo.png"
     },

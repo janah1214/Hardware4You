@@ -1,0 +1,80 @@
+.page[b-mounxvyy74] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-mounxvyy74] {
+    flex: 1;
+}
+
+/* Men�leiste Farbe*/
+.sidebar[b-mounxvyy74] {
+    background-color: green;
+}
+
+/*Farbe f�r oberen Balken*/
+.top-row[b-mounxvyy74] {
+    background-color: green;
+    border-bottom: 1px solid #d6d5d5;
+    /*f�r die Positionierung im Balken*/
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-mounxvyy74]  a, .top-row[b-mounxvyy74]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+        .top-row[b-mounxvyy74]  a:hover, .top-row[b-mounxvyy74]  .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        .top-row[b-mounxvyy74]  a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+@media (max-width: 640.98px) {
+    .top-row[b-mounxvyy74] {
+        justify-content: space-between;
+    }
+
+        .top-row[b-mounxvyy74]  a, .top-row[b-mounxvyy74]  .btn-link {
+            margin-left: 0;
+        }
+}
+
+@media (min-width: 641px) {
+    .page[b-mounxvyy74] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-mounxvyy74] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-mounxvyy74] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+        .top-row.auth[b-mounxvyy74]  a:first-child {
+            flex: 1;
+            text-align: right;
+            width: 0;
+        }
+
+    .top-row[b-mounxvyy74], article[b-mounxvyy74] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}

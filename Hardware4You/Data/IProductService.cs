@@ -1,4 +1,4 @@
-﻿using Hardware4You.Data;
+﻿using Hardware4You.Models;
 
 namespace Hardware4You.Data
 {

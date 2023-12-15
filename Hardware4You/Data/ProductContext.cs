@@ -1,4 +1,4 @@
-﻿using Hardware4You.Data;
+﻿using Hardware4You.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hardware4You.Data
@@ -14,8 +14,6 @@ namespace Hardware4You.Data
         {
         }
 
-        public virtual DbSet<Product> Products { get; set; } = null!;
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -24,20 +22,26 @@ namespace Hardware4You.Data
             }
         }
 
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.ToTable("Product");
 
                 entity.Property(e => e.Id)
-                    .HasMaxLength(100)
+                      .HasMaxLength(100)
                     .IsUnicode(false);
             });
 
             OnModelCreatingPartial(modelBuilder);
-        }
-
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        }  
+        //public DbSet<Cart> Carts { get; set; }
+        //public DbSet<CartItem> CartItems { get; set; }
+        public DbSet<Product> Products { get; set; }
+        //public DbSet<ProductCategory> ProductCategories { get; set; }
+        //public DbSet<User> Users { get; set; }
     }
 }

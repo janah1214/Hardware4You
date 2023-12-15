@@ -1,7 +1,37 @@
 ﻿@page "/Macbook"
 
+@using Hardware4You.Models
+@using Hardware4You.Data
+@inject IProductService ProductService
+
 <h3>Macbook</h3>
 
-@code {
+@foreach (var product in Products)
+{
+    if (product.CategoryId == 3)
+    {
+        <div class="card w-25">
+            <div class="card-body">
+                <img src="@product.ImageURL" class="card-img">
+                <h5 class="card-title">@product.Name</h5>
+                <blockquote class="card-text">$@product.Price</blockquote>
+                @if (DisplayBuyButton)
+                {
+                    <button class="btn btn-primary" type="button">Buy</button>
+                }
+            </div>
+        </div>
+    }
+}
 
+@code {
+    [Parameter]
+    public bool DisplayBuyButton { get; set; } = true;
+
+    public IEnumerable<Product> Products { get; set; } = null!;
+
+    protected override void OnInitialized()
+    {
+        Products = ProductService.GetProducts();
+    }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "w6sgIWxeu7ido53Vo6a2McZuwFrxWLx7mD+JKQcPyMM=",
+  "Hash": "I8zrqFavPEtodRTntZGZbb/69pc/xyD5mdd0RnLg+XM=",
   "Source": "Hardware4You",
   "BasePath": "_content/Hardware4You",
   "Mode": "Default",
@@ -1307,6 +1307,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\Images\\macbook.jpg",
+      "SourceId": "Hardware4You",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "BasePath": "_content/Hardware4You",
+      "RelativePath": "Images/macbook.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\macbook.jpg"
     },
     {
       "Identity": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\Logo.png",

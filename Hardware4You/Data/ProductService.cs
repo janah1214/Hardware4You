@@ -1,4 +1,4 @@
-﻿using Hardware4You.Data;
+﻿using Hardware4You.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hardware4You.Data

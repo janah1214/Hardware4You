@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Pages/Admin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Pages/Beamer.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmVhbWVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXBob25lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Pages/Laptop.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFwdG9wLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Pages/Macbook.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFjYm9vay5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,10 +56,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Pages/PC.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUEMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Pages/Products.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/_Imports.razor]
