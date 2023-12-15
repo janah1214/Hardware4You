@@ -1,0 +1,40 @@
+﻿@page "/ShoppingCart"
+
+@using Hardware4You.Data
+@using Hardware4You.Models
+@inject CartService CartService
+
+<h3>ShoppingBasket</h3>
+
+@if (Products.Count() > 0)
+{
+    <br />
+    <h4>Du hast @Products.Count Artikel im Warenkorb:</h4>
+    <!--TODO: Verlinkung Produkteseiten anstatt doppelter code. dont know how yet-->
+    <!--<Iphone Products="Products"></Iphone>-->
+
+    @foreach (var product in Products)
+    {
+        <div class="card w-25">
+            <div class="card-body">
+                <img src="@product.ImageURL" class="card-img">
+                <h5 class="card-title">@product.Name</h5>
+                <blockquote class="card-text">$@product.Price</blockquote>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <br />
+    <h4>Du hast keine Artikel im Warenkorb.</h4>
+}
+
+@code {
+    List<Product> Products = new List<Product>();
+
+    protected override void OnInitialized()
+    {
+        Products = CartService.SelectedItems;
+    }
+}

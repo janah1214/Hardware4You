@@ -5,9 +5,9 @@
 @using Syncfusion.Blazor.Grids
 @inject IProductService ProductService
 
-<PageTitle>Products</PageTitle>
+<PageTitle>Admin</PageTitle>
 
-<h3>Products</h3>
+<h3>Admin Produkteverwaltung</h3>
 <br />
 <SfGrid DataSource="@HardwareProducts" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" TValue="Product">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>

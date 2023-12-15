@@ -2,7 +2,9 @@
 
 @using Hardware4You.Models
 @using Hardware4You.Data
+@using MudBlazor
 @inject IProductService ProductService
+@inject CartService CartService
 
 <h3>iPhone</h3>
 
@@ -19,7 +21,7 @@
                 <blockquote class="card-text">$@product.Price</blockquote>
                 @if (DisplayBuyButton)
                 {
-                    <button class="btn btn-primary" type="button">Buy</button>
+                    <button class="btn btn-primary" type="button" @onclick="() => Buy(product.Id, Products.ToList())">Buy</button>
                 }
             </div>
         </div>
@@ -30,10 +32,17 @@
     [Parameter]
     public bool DisplayBuyButton { get; set; } = true;
 
+    [EditorRequired]
+    [Parameter]
     public IEnumerable<Product> Products { get; set; } = null!;
 
     protected override void OnInitialized()
     {
         Products = ProductService.GetProducts();
+    }
+
+    private void Buy(long productId, List<Product> products)
+    {
+        CartService.AddProductToCart(productId, products);
     }
 }

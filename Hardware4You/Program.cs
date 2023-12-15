@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMudServices();
 
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<CartService>();
 builder.Services.AddDbContext<ProductContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("HardwareDatabase")));
 
