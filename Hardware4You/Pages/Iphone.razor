@@ -10,6 +10,18 @@
 
 @foreach (var product in Products)
 {
+    <!--TODO responsive kacheln-->
+    <!--<MudCard Outlined="true">
+        <MudCardContent>
+            <MudImage Src="@product.ImageURL"></MudImage>
+            <MudText>@product.Name</MudText>
+            <MudText Typo="Typo.body2">"@product.Price"</MudText>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton OnClick="() => Buy(product.Id, Products.ToList())" Variant="Variant.Text" Color="Color.Primary">Kaufen</MudButton>
+        </MudCardActions>
+    </MudCard>-->
+
     //TODO: so hardcoded nicht gut - wenn categoryid ändern würde geht es nicht mehr
     if(product.CategoryId == 1)
     {
@@ -21,7 +33,7 @@
                 <blockquote class="card-text">$@product.Price</blockquote>
                 @if (DisplayBuyButton)
                 {
-                    <button class="btn btn-primary" type="button" @onclick="() => Buy(product.Id, Products.ToList())">Buy</button>
+                    <button class="btn btn-primary" type="button" @onclick="() => Buy(product.Id, Products.ToList())">Kaufen</button>
                 }
             </div>
         </div>
@@ -43,6 +55,8 @@
     public IEnumerable<Product> Products { get; set; } = null!;
 
     public bool ClickedOnBuyingButton { get; set; } = false;
+
+    Justify justification = Justify.FlexStart;
 
     protected override void OnInitialized()
     {
