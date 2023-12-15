@@ -28,6 +28,12 @@
     }
 }
 
+@if (ClickedOnBuyingButton)
+{
+    //TODO: implement product name.show as box top of webpage
+    <br><p>Das Produkt "name" wurde in den Warenkorb gestellt.</p>
+}
+
 @code {
     [Parameter]
     public bool DisplayBuyButton { get; set; } = true;
@@ -35,6 +41,8 @@
     [EditorRequired]
     [Parameter]
     public IEnumerable<Product> Products { get; set; } = null!;
+
+    public bool ClickedOnBuyingButton { get; set; } = false;
 
     protected override void OnInitialized()
     {
@@ -44,5 +52,6 @@
     private void Buy(long productId, List<Product> products)
     {
         CartService.AddProductToCart(productId, products);
+        ClickedOnBuyingButton = true;
     }
 }

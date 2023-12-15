@@ -3,6 +3,7 @@
 @using Hardware4You.Models
 @using Hardware4You.Data
 @inject IProductService ProductService
+@inject CartService CartService
 
 <h3>Laptop</h3>
 
@@ -17,11 +18,16 @@
                 <blockquote class="card-text">$@product.Price</blockquote>
                 @if (DisplayBuyButton)
                 {
-                    <button class="btn btn-primary" type="button">Buy</button>
+                    <button class="btn btn-primary" type="button" @onclick="() => Buy(product.Id, Products.ToList())">Buy</button>
                 }
             </div>
         </div>
     }
+}
+
+@if (ClickedOnBuyingButton)
+{
+    <br><p>Das Produkt "name" wurde in den Warenkorb gestellt.</p>
 }
 
 @code {
@@ -30,8 +36,16 @@
 
     public IEnumerable<Product> Products { get; set; } = null!;
 
+    public bool ClickedOnBuyingButton { get; set; } = false;
+
     protected override void OnInitialized()
     {
         Products = ProductService.GetProducts();
+    }
+
+    private void Buy(long productId, List<Product> products)
+    {
+        CartService.AddProductToCart(productId, products);
+        ClickedOnBuyingButton = true;
     }
 }

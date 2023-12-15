@@ -4,7 +4,7 @@
 @using Hardware4You.Models
 @inject CartService CartService
 
-<h3>ShoppingBasket</h3>
+<h3>Warenkorb</h3>
 
 @if (Products.Count() > 0)
 {
@@ -26,8 +26,7 @@
 }
 else
 {
-    <br />
-    <h4>Du hast keine Artikel im Warenkorb.</h4>
+    <br><h4>Du hast keine Artikel im Warenkorb.</h4>
 }
 
 @code {
