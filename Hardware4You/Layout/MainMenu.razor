@@ -1,0 +1,38 @@
+﻿@using MudBlazor
+
+<!--TODO: darstellung titel, logo, icons-->
+<!--Hardware4You
+<a href=""><img src="logo.png" style="height:30px" /></a>-->
+<!--<MudIcon Icon="@Icons.Material.Filled.SettingsSuggest" Title="Einstellungen" />
+<MudIcon Icon="@Icons.Material.Filled.Info" Title="Info" />-->
+
+<AuthorizeView Roles="standard">
+    <Authorized>
+        <a href="ShoppingCart"><MudIcon Icon="@Icons.Material.Filled.ShoppingCartCheckout" Title="Warenkorb" /></a>
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView>
+    <Authorizing>
+        <div>Laden...</div>
+    </Authorizing>
+    <NotAuthorized>
+        <a href="Login"><MudIcon Icon="@Icons.Material.Filled.Login" Title="Einloggen" /></a>
+    </NotAuthorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="standard, admin">
+    <Authorized>
+        <a href="Logout"><MudIcon Icon="@Icons.Material.Filled.Logout" Title="Ausloggen" /></a>
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="admin">
+    <Authorized>
+        <!--TODO: wenn gewollt icons nur für admin-->
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    
+}

@@ -1,48 +1,18 @@
 ﻿@using MudBlazor
 @inherits LayoutComponentBase
 
-<AuthorizeView>
-    <Authorized>
-        <div class="page">
-            <div class="sidebar">
-                <NavMenu />
-            </div>
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
 
-            <main>
-                <div class="top-row px-4">
-                    <!--TODO: darstellung titel, logo, icons-->
-                    <!--Hardware4You
-                    <a href=""><img src="logo.png" style="height:30px" /></a>-->
-                    <!--<MudIcon Icon="@Icons.Material.Filled.SettingsSuggest" Title="Einstellungen" />
-                    <MudIcon Icon="@Icons.Material.Filled.Info" Title="Info" />-->
-                    <a href="ShoppingCart"><MudIcon Icon="@Icons.Material.Filled.ShoppingCartCheckout" Title="Warenkorb" /></a>
-                    <a href="Logout"><MudIcon Icon="@Icons.Material.Filled.Logout" Title="Ausloggen" /></a>
-                </div>
-
-                <article class="content px-4">
-                    @Body
-                </article>
-            </main>
+    <main>
+        <div class="top-row px-4">
+            <MainMenu />
         </div>
-    </Authorized>
-    <Authorizing>
-        <div>Laden...</div>
-    </Authorizing>
-    <NotAuthorized>
-        <div class="page">
-            <div class="sidebar">
-                <NavMenuLogin />
-            </div>
-            <main>
-                <div class="top-row px-4">
-                    <a href="Login"><MudIcon Icon="@Icons.Material.Filled.Login" Title="Einloggen" /></a>
-                </div>
 
-                <article class="content px-4">
-                    @Body
-                </article>
-            </main>
-        </div>
-    </NotAuthorized>
-</AuthorizeView>
-
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
