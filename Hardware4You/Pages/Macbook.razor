@@ -2,17 +2,19 @@
 
 @using Hardware4You.Models
 @using Hardware4You.Data
+@using MudBlazor
 @inject IProductService ProductService
 @inject CartService CartService
 
 <h3>Macbook</h3>
 
+<MudPaper Class="d-flex flex-wrap gap-4" Elevation="0">
+
 @foreach (var product in Products)
 {
     if (product.CategoryId == 3)
     {
-        <div class="card w-25">
-            <div class="card-body">
+            <MudPaper Class="mud-theme-primary" Width="256px" Height="350px" src="@product.ImageURL">
                 <img src="@product.ImageURL" class="card-img">
                 <h5 class="card-title">@product.Name</h5>
                 <blockquote class="card-text">$@product.Price</blockquote>
@@ -20,10 +22,11 @@
                 {
                     <button class="btn btn-primary" type="button" @onclick="() => Buy(product.Id, Products.ToList())">Kaufen</button>
                 }
-            </div>
-        </div>
+            </MudPaper>
     }
 }
+
+</MudPaper>
 
 @if (ClickedOnBuyingButton)
 {

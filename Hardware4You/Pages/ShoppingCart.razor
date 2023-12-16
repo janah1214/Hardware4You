@@ -2,6 +2,7 @@
 
 @using Hardware4You.Data
 @using Hardware4You.Models
+@using MudBlazor
 @inject CartService CartService
 
 <h3>Warenkorb</h3>
@@ -12,16 +13,16 @@
     <!--TODO: Verlinkung Produkteseiten anstatt doppelter code. dont know how yet-->
     <!--<Iphone Products="Products"></Iphone>-->
 
-    @foreach (var product in Products)
-    {
-        <div class="card w-25">
-            <div class="card-body">
+    <MudPaper Class="d-flex flex-wrap gap-4" Elevation="0">
+        @foreach (var product in Products)
+        {
+            <MudPaper Class="mud-theme-primary" Width="256px" Height="350px" src="@product.ImageURL">
                 <img src="@product.ImageURL" class="card-img">
                 <h5 class="card-title">@product.Name</h5>
                 <blockquote class="card-text">$@product.Price</blockquote>
-            </div>
-        </div>
-    }
+            </MudPaper>
+        }
+    </MudPaper>
 }
 else
 {
