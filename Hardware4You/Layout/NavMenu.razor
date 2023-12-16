@@ -1,15 +1,15 @@
-﻿<div class="top-row navbar navbar-dark" style="height: 10.5rem">
+﻿<div class="top-row navbar navbar-dark">
+    <!--<div class="top-row navbar navbar-dark" style="height: 10.5rem">-->
     <div class="container-fluid">
         <!--Name und Logo-->
         <img src="logo_weiss.png" />
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
 </div>
 <div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
+    <nav class="flex-column" id="navmenuicons">
         <!--Menüleiste Startseite-->
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">

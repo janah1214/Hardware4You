@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[6.11.1, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Syncfusion.Blazor.Grid": {
               "target": "Package",
               "version": "[23.2.7, )"

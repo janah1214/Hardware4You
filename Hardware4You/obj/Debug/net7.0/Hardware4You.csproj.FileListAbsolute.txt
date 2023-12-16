@@ -286,3 +286,4 @@ C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Microsoft.
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Microsoft.JSInterop.dll
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\MudBlazor.dll
+C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\bin\Debug\net7.0\Newtonsoft.Json.dll

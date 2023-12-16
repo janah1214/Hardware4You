@@ -1,5 +1,6 @@
 using Hardware4You.Data;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
@@ -11,8 +12,12 @@ builder.Services.AddMudServices();
 
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<CartService>();
+builder.Services.AddScoped<UserService>();
 builder.Services.AddDbContext<ProductContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("HardwareDatabase")));
+
+builder.Services.AddScoped<UserAuthenticationStateProvider>();
+builder.Services.AddScoped<AuthenticationStateProvider>(sp => sp.GetRequiredService<UserAuthenticationStateProvider>());
 
 // Add services to the container.
 builder.Services.AddRazorPages();

@@ -1,4 +1,5 @@
 ﻿@page "/admin"
+@attribute [Authorize(Roles = "admin")]
 
 @using Hardware4You.Data
 @using Hardware4You.Models

@@ -1,0 +1,45 @@
+﻿@page "/Login"
+@attribute [AllowAnonymous]
+
+@using Hardware4You.Data
+@using MudBlazor
+@inject UserAuthenticationStateProvider UserAuthenticationStateProvider
+
+<h3>Login</h3>
+
+<div class="d-flex">
+    <MudTextField @bind-Value="Username" Label="Benutzername" Variant="Variant.Text" InputType="InputType.Text" Adornment="Adornment.Start" />
+    <MudTextField @bind-Value="Password" Label="Passwort" Variant="Variant.Text" InputType="@PasswordInput" Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon" OnAdornmentClick="ButtonTestclick" AdornmentAriaLabel="Show Password" />
+</div>
+
+<button type="button" class="btn btn-success" @onclick="LoginAsync">Login</button>
+
+@code {
+    public string Username { get; set; }
+    public string Password { get; set; }
+
+    bool isShow;
+    InputType PasswordInput = InputType.Password;
+    string PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+
+    void ButtonTestclick()
+    {
+        @if (isShow)
+        {
+            isShow = false;
+            PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+            PasswordInput = InputType.Password;
+        }
+        else
+        {
+            isShow = true;
+            PasswordInputIcon = Icons.Material.Filled.Visibility;
+            PasswordInput = InputType.Text;
+        }
+    }
+
+    public async Task LoginAsync()
+    {
+        await UserAuthenticationStateProvider.LoginAsync(Username, Password);
+    }
+}

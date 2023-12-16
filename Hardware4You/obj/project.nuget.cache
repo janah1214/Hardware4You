@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1wV2ReCULvP0ErNUzPiK+s/gKzN/bOF2/1K1iKy2Z50FLC/szHsh3P2AzZWJrv9k9VSx2suSRcwtENB9+hL2IQ==",
+  "dgSpecHash": "WrfbYmcLiGKVCgtdftsBSsRX5ETL2Hgm3XWo1jQfleo/mrQgO256LtYEL/RDSAXr7soVHmq2LCZlHXio1ZtoDQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\Hardware4You.csproj",
   "expectedPackageFiles": [
@@ -51,6 +51,7 @@
     "C:\\Users\\janah\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\janah\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\janah\\.nuget\\packages\\mudblazor\\6.11.1\\mudblazor.6.11.1.nupkg.sha512",
+    "C:\\Users\\janah\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.buttons\\23.2.7\\syncfusion.blazor.buttons.23.2.7.nupkg.sha512",
     "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.calendars\\23.2.7\\syncfusion.blazor.calendars.23.2.7.nupkg.sha512",
     "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.core\\23.2.7\\syncfusion.blazor.core.23.2.7.nupkg.sha512",

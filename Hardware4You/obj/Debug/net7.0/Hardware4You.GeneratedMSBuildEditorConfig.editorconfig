@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Layout/NavMenuLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnVMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Pages/Admin.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +48,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Pages/Laptop.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFwdG9wLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Pages/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/janah/Desktop/Git/Hardware4You/Hardware4You/Pages/Macbook.razor]

@@ -1,4 +1,5 @@
 ﻿@page "/Macbook"
+@attribute [Authorize(Roles = "standard")]
 
 @using Hardware4You.Models
 @using Hardware4You.Data
@@ -17,7 +18,7 @@
             <MudPaper Class="mud-theme-primary" Width="256px" Height="350px" src="@product.ImageURL">
                 <img src="@product.ImageURL" class="card-img">
                 <h5 class="card-title">@product.Name</h5>
-                <blockquote class="card-text">$@product.Price</blockquote>
+                <blockquote class="card-text">@product.Price CHF</blockquote>
                 @if (DisplayBuyButton)
                 {
                     <button class="btn btn-primary" type="button" @onclick="() => Buy(product.Id, Products.ToList())">Kaufen</button>
