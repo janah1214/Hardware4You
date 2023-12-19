@@ -1,4 +1,10 @@
-﻿<div class="top-row navbar navbar-dark">
+﻿@using Hardware4You.Data
+@using Hardware4You.Models
+@using Hardware4You.Pages
+@using MudBlazor
+@inject IProductCategoryService ProductCategoryService
+
+<div class="top-row navbar navbar-dark">
     <!--<div class="top-row navbar navbar-dark" style="height: 10.5rem">-->
     <div class="container-fluid">
         <!--Name und Logo-->
@@ -39,62 +45,27 @@
                     </NavLink>
                 </div>
 
-                <!--Menüleiste iPhone-->
-                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="/iPhone" Match="NavLinkMatch.All">
-                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> iPhone
-                    </NavLink>
-                </div>
-
-                <!--Menüleiste iPad-->
-                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="/iPad" Match="NavLinkMatch.All">
-                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> iPad
-                    </NavLink>
-                </div>
-
-                <!--Menüleiste Macbook-->
-                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="/Macbook" Match="NavLinkMatch.All">
-                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Macbook
-                    </NavLink>
-                </div>
-
-                <!--Menüleiste HP Laptop-->
-                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="/Laptop" Match="NavLinkMatch.All">
-                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> HP Laptop
-                    </NavLink>
-                </div>
-
-                <!--Menüleiste PC-->
-                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="/PC" Match="NavLinkMatch.All">
-                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> PC
-                    </NavLink>
-                </div>
-
-                <!--Menüleiste Monitor-->
-                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="/Monitor" Match="NavLinkMatch.All">
-                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Monitor
-                    </NavLink>
-                </div>
-
-                <!--Menüleiste Beamer-->
-                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="/Beamer" Match="NavLinkMatch.All">
-                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Beamer
-                    </NavLink>
-                </div>
+                @foreach (var productCat in ProductCategories)
+                {
+                    <div class="nav-item px-3">
+                        <a class="nav-link" href="/products/@productCat.Id">
+                            <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> @productCat.Name
+                        </a>
+                    </div>
+                }
             </Authorized>
         </AuthorizeView>
 
         <AuthorizeView Roles="admin">
             <Authorized>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="/admin">
-                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Admin
+                    <NavLink class="nav-link" href="/products">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Produkte
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="/productcategories">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Produktkategorien
                     </NavLink>
                 </div>
             </Authorized>
@@ -110,5 +81,14 @@
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+    }
+
+    [EditorRequired]
+    [Parameter]
+    public IEnumerable<ProductCategory> ProductCategories { get; set; } = null!;
+
+    protected override void OnInitialized()
+    {
+        ProductCategories = ProductCategoryService.GetProductCategories();
     }
 }

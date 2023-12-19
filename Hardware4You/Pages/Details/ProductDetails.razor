@@ -1,0 +1,61 @@
+﻿@page "/products/{Cat:int}/{Prod:int}"
+@attribute [Authorize(Roles = "standard")]
+
+@using Hardware4You.Data
+@using Hardware4You.Models
+@using MudBlazor
+@inject IProductService ProductService
+@inject CartService CartService
+
+<h3>ProduktDetails</h3>
+
+@foreach (var product in Products)
+{
+    if(product.CategoryId == Cat && product.Id == Prod)
+    {
+        <p>@product.Id</p>
+        <p>@product.Name</p>
+        <p>@product.Price</p>
+
+        @if (DisplayBuyButton)
+        {
+            <MudPaper>
+                <button class="btn btn-primary" type="button" @onclick="() => Buy(product.Id, Products.ToList())">Kaufen</button>
+            </MudPaper>
+        }
+
+        @if (ClickedOnBuyingButton)
+        {
+            <br>
+            <p>Das Produkt @product.Name wurde in den Warenkorb gestellt.</p>
+        }
+    }
+}
+
+@code {
+    [Parameter]
+    public int Cat{get;set;}
+
+    [Parameter]
+    public int Prod { get; set; }
+
+    [EditorRequired]
+    [Parameter]
+    public IEnumerable<Product> Products { get; set; } = null!;
+
+    [Parameter]
+    public bool DisplayBuyButton { get; set; } = true;
+
+    public bool ClickedOnBuyingButton { get; set; } = false;
+
+    protected override void OnInitialized()
+    {
+        Products = ProductService.GetProducts();
+    }
+
+    private void Buy(long productId, List<Product> products)
+    {
+        CartService.AddProductToCart(productId, products);
+        ClickedOnBuyingButton = true;
+    }
+}

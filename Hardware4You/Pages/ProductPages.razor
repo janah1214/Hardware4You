@@ -1,0 +1,44 @@
+﻿@page "/products/{Cat:int}"
+@attribute [Authorize(Roles = "standard")]
+
+@using Hardware4You.Models
+@using Hardware4You.Data
+@using Hardware4You.Pages.Details
+@using MudBlazor
+@inject IProductService ProductService
+
+<h3>Produkte</h3>
+
+<MudPaper Class="d-flex flex-wrap gap-4" Elevation="0">
+
+    @foreach (var product in Products)
+    {
+        if(product.CategoryId == Cat)
+        {
+            <a class="" href="/products/@Cat/@product.Id">
+                <MudPaper Class="mud-theme-primary" Width="256px" Height="350px" src="@product.ImageURL">
+                    <img src="@product.ImageURL" class="card-img">
+                    <h5 class="card-title">@product.Name</h5>
+                    <blockquote class="card-text">@product.Price CHF</blockquote>
+                </MudPaper>
+            </a>
+        }
+    }
+
+</MudPaper>
+
+@code {
+    [Parameter]
+    public int Cat { get; set; }
+
+    [EditorRequired]
+    [Parameter]
+    public IEnumerable<Product> Products { get; set; } = null!;
+
+    Justify justification = Justify.FlexStart;
+
+    protected override void OnInitialized()
+    {
+        Products = ProductService.GetProducts();
+    }
+}

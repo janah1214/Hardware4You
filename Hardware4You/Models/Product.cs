@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Hardware4You.Data;
 
 namespace Hardware4You.Models
 {
@@ -19,6 +18,6 @@ namespace Hardware4You.Models
         public int CategoryId { get; set; }
 
         [ForeignKey("CategoryId")]
-        public ProductCategory ProductCategory { get; set; }
+        public ProductCategory ProductCategory { get; set; } = null!;
     }
 }

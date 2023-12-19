@@ -1,0 +1,60 @@
+﻿@page "/productcategories"
+@attribute [Authorize(Roles = "admin")]
+
+@using Hardware4You.Data
+@using Hardware4You.Models
+@using Syncfusion.Blazor.Grids
+@inject IProductCategoryService ProductCategoryService
+
+<PageTitle>Admin</PageTitle>
+
+<h3>Verwaltung Produktekategorien</h3>
+<br />
+<SfGrid DataSource="@ProdCategories" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" TValue="ProductCategory">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="ProductCategory"></GridEvents>
+    <GridColumns>
+        <GridColumn Field="@nameof(ProductCategory.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="true" Width="10"></GridColumn>
+        <GridColumn Field="@nameof(ProductCategory.Name)" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public IEnumerable<ProductCategory> ProdCategories { get; set; } = null!;
+
+    protected override void OnInitialized()
+    {
+        ProdCategories = ProductCategoryService.GetProductCategories();
+    }
+    public void ActionBeginHandler(ActionEventArgs<ProductCategory> Args)
+    {
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            if (Args.Action == "Add")
+            {
+                ProductCategoryService.InsertProductCategory(Args.Data);
+            }
+        }
+
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            if (Args.Action == "Edit")
+            {
+                ProductCategoryService.UpdateProductCategory(Args.Data.Id, Args.Data);
+            }
+        }
+
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
+        {
+            ProductCategoryService.DeleteProductCategory(Args.Data.Id);
+        }
+    }
+    public void ActionCompleteHandler(ActionEventArgs<ProductCategory> Args)
+    {
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            ProdCategories = ProductCategoryService.GetProductCategories();
+        }
+    }
+
+}

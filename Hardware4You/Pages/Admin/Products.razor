@@ -1,0 +1,70 @@
+﻿@page "/products"
+@attribute [Authorize(Roles = "admin")]
+
+@using Hardware4You.Data
+@using Hardware4You.Models
+@using Syncfusion.Blazor.Grids
+@inject IProductService ProductService
+
+<PageTitle>Admin</PageTitle>
+
+<h3>Verwaltung Produkte</h3>
+<br />
+<SfGrid DataSource="@HardwareProducts" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" TValue="Product">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Product"></GridEvents>
+    <GridColumns>
+        <GridColumn Field="@nameof(Product.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Product.Name)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Product.Description)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Product.ImageURL)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Product.Price)" Width="50"></GridColumn>
+        <GridColumn Field="@nameof(Product.Qty)" Width="50"></GridColumn>
+        <GridColumn Field="@nameof(Product.CategoryId)" Width="50"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public IEnumerable<Product> HardwareProducts { get; set; } = null!;
+
+    protected override void OnInitialized()
+    {
+        HardwareProducts = ProductService.GetProducts();
+    }
+    public void ActionBeginHandler(ActionEventArgs<Product> Args)
+    {
+        //Will be triggered when CRUD action is initiated
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            if (Args.Action == "Add")
+            {
+                // Insert the changes into your database here.
+                ProductService.InsertProduct(Args.Data);
+            }
+        }
+
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            if (Args.Action == "Edit")
+            {
+                //Update the changes into your database here.
+                ProductService.UpdateProduct(Args.Data.Id, Args.Data);
+            }
+        }
+
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
+        {
+            //Remove the record from your database
+            ProductService.DeleteProduct(Args.Data.Id);
+        }
+    }
+    public void ActionCompleteHandler(ActionEventArgs<Product> Args)
+    {
+        //will be triggered when CRUD action is complete.
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            HardwareProducts = ProductService.GetProducts(); //to fetch the updated data from db to Grid
+        }
+    }
+
+}

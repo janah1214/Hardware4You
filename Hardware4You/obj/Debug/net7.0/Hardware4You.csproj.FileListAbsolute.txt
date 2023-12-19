@@ -278,6 +278,7 @@ C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\staticweba
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Hardware4You.props
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\staticwebassets.pack.json
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\scopedcss\Layout\MainLayout.razor.rz.scp.css
+C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\scopedcss\Layout\MainMenu.razor.rz.scp.css
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\scopedcss\Layout\NavMenu.razor.rz.scp.css
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\scopedcss\bundle\Hardware4You.styles.css
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\scopedcss\projectbundle\Hardware4You.bundle.scp.css
@@ -287,4 +288,3 @@ C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\refint\Har
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\Hardware4You.pdb
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\Hardware4You.genruntimeconfig.cache
 C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\ref\Hardware4You.dll
-C:\Users\janah\Desktop\Git\Hardware4You\Hardware4You\obj\Debug\net7.0\scopedcss\Layout\MainMenu.razor.rz.scp.css

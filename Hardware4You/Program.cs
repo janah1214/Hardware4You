@@ -1,7 +1,5 @@
 using Hardware4You.Data;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
 using Syncfusion.Blazor;
@@ -11,9 +9,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMudServices();
 
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IProductCategoryService, ProductCategoryService>();
+
 builder.Services.AddScoped<CartService>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddDbContext<ProductContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("HardwareDatabase")));
+
+builder.Services.AddDbContext<ProductCategoryContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("HardwareDatabase")));
 
 builder.Services.AddScoped<UserAuthenticationStateProvider>();

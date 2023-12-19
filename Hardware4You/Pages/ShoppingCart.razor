@@ -11,8 +11,6 @@
 @if (Products.Count() > 0)
 {
     <br><h4>Du hast @Products.Count Artikel im Warenkorb:</h4>
-    <!--TODO: Verlinkung Produkteseiten anstatt doppelter code. dont know how yet-->
-    <!--<Iphone Products="Products"></Iphone>-->
 
     <MudPaper Class="d-flex flex-wrap gap-4" Elevation="0">
         @foreach (var product in Products)
@@ -20,7 +18,7 @@
             <MudPaper Class="mud-theme-primary" Width="256px" Height="350px" src="@product.ImageURL">
                 <img src="@product.ImageURL" class="card-img">
                 <h5 class="card-title">@product.Name</h5>
-                <blockquote class="card-text">$@product.Price</blockquote>
+                <blockquote class="card-text">@product.Price CHF</blockquote>
             </MudPaper>
         }
     </MudPaper>
