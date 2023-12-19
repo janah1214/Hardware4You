@@ -13,20 +13,24 @@
 {
     if(product.CategoryId == Cat && product.Id == Prod)
     {
-        <p>@product.Id</p>
-        <p>@product.Name</p>
-        <p>@product.Price</p>
+        <img src="@product.ImageURL" class="card-img" style="width: 200px">
+
+        <p>Id: @product.Id</p>
+        <p>Name: @product.Name</p>
+        <p>Beschreibung: @product.Description</p>
+        <p>Preis: @product.Price</p>
+        <p>Anz: @product.Quantity</p>
 
         @if (DisplayBuyButton)
         {
-            <MudPaper>
-                <button class="btn btn-primary" type="button" @onclick="() => Buy(product.Id, Products.ToList())">Kaufen</button>
-            </MudPaper>
+            <button class="btn btn-primary" type="button" @onclick="() => Buy(product.Id, Products.ToList())">
+                <MudIcon Icon="@Icons.Material.Filled.AddShoppingCart" Title="Einloggen" /> Warenkorb hinzufügen
+            </button>
         }
 
         @if (ClickedOnBuyingButton)
         {
-            <br>
+            <br /><br />
             <p>Das Produkt @product.Name wurde in den Warenkorb gestellt.</p>
         }
     }

@@ -16,7 +16,14 @@ namespace Hardware4You.Data
             //if (SelectedItems.Contains(product) is false)
             //{
                 SelectedItems.Add(product);
+                
             //}
+        }
+
+        // TODO: use when buying product in shopping basket
+        public void BuyProductInCart(Product product)
+        {
+            product.Quantity -= 1;
         }
     }
 }

@@ -14,10 +14,7 @@ namespace Hardware4You.Models
         public string Description { get; set; } = null!;
         public string ImageURL { get; set; } = null!;
         public int Price { get; set; }
-        public int Qty { get; set; }
+        public int Quantity { get; set; }
         public int CategoryId { get; set; }
-
-        [ForeignKey("CategoryId")]
-        public ProductCategory ProductCategory { get; set; } = null!;
     }
 }
