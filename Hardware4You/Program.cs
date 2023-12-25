@@ -1,4 +1,5 @@
 using Hardware4You.Data;
+using Hardware4You.Data.ShoppingCart;
 using Hardware4You.Data.User;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.EntityFrameworkCore;

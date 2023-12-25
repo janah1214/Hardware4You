@@ -8,7 +8,7 @@
     <!--<div class="top-row navbar navbar-dark" style="height: 10.5rem">-->
     <div class="container-fluid">
         <!--Name und Logo-->
-        <img src="logo_weiss.png" />
+        <a href=""><img src="logo_weiss.png" /></a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,7 +23,7 @@
             </Authorizing>
             <NotAuthorized>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="/login">
+                    <NavLink class="nav-link" href="/login" Match="NavLinkMatch.All">
                         <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Login
                     </NavLink>
                 </div>
@@ -60,17 +60,17 @@
         <AuthorizeView Roles="admin">
             <Authorized>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="/products">
+                    <NavLink class="nav-link" href="/products" Match="NavLinkMatch.All">
                         <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Produkte
                     </NavLink>
                 </div>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="/productcategories">
+                    <NavLink class="nav-link" href="/productcategories" Match="NavLinkMatch.All">
                         <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Produktkategorien
                     </NavLink>
                 </div>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="/users">
+                    <NavLink class="nav-link" href="/users" Match="NavLinkMatch.All">
                         <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Benutzer
                     </NavLink>
                 </div>

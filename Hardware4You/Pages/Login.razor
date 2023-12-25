@@ -1,4 +1,4 @@
-﻿@page "/Login"
+﻿@page "/login"
 @attribute [AllowAnonymous]
 
 @using Hardware4You.Data
@@ -16,8 +16,8 @@
 <button type="button" class="btn btn-success" @onclick="LoginAsync">Login</button>
 
 @code {
-    public string Username { get; set; }
-    public string Password { get; set; }
+    public string Username { get; set; } = null!;
+    public string Password { get; set; } = null!;
 
     bool isShow;
     InputType PasswordInput = InputType.Password;

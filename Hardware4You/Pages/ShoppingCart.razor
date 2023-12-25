@@ -2,6 +2,7 @@
 @attribute [Authorize(Roles = "standard")]
 
 @using Hardware4You.Data
+@using Hardware4You.Data.ShoppingCart
 @using Hardware4You.Models
 @using MudBlazor
 @inject CartService CartService
@@ -10,7 +11,7 @@
 
 @if (Products.Count() > 0)
 {
-    <br><h4>Du hast @Products.Count Artikel im Warenkorb:</h4>
+    <br><h4>Du hast @Products.Count() Artikel im Warenkorb:</h4>
 
     <MudPaper Class="d-flex flex-wrap gap-4" Elevation="0">
         @foreach (var product in Products)
@@ -22,6 +23,24 @@
             </MudPaper>
         }
     </MudPaper>
+
+    @if (DisplayCheckoutButton)
+    {
+        <!--<a href="/ShoppingCart/Checkout" class="btn btn-primary" type="button">
+            <MudIcon Icon="@Icons.Material.Filled.ShoppingCartCheckout" /> Artikel kaufen
+        </a>-->
+
+        <button class="btn btn-primary" type="button" @onclick="() => Checkout(Products.ToList())">
+            <MudIcon Icon="@Icons.Material.Filled.ShoppingCartCheckout" /> Endgültig kaufen
+        </button>
+
+        @if (ClickedOnCheckoutButton)
+        {
+            <ShoppingCartCheckout TestInput="Testoutput">
+                checkout details
+            </ShoppingCartCheckout>
+        }
+    }
 }
 else
 {
@@ -29,10 +48,26 @@ else
 }
 
 @code {
-    List<Product> Products = new List<Product>();
+    public string Testoutput { get; set; } = "testoutput";
+
+    public IEnumerable<Product> Products { get; set; } = null!;
+
+    public bool DisplayCheckoutButton { get; set; } = false;
+
+    public bool ClickedOnCheckoutButton { get; set; } = false;
 
     protected override void OnInitialized()
     {
         Products = CartService.SelectedItems;
+
+        if(Products.Count() > 0)
+        {
+            DisplayCheckoutButton = true;
+        }
+    }
+
+    private void Checkout(List<Product> products)
+    {
+        ClickedOnCheckoutButton = true;
     }
 }
