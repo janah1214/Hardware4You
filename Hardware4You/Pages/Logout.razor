@@ -2,7 +2,8 @@
 @attribute [AllowAnonymous]
 
 @using Hardware4You.Data;
-@inject UserAuthenticationStateProvider UserAuthenticationStateProvider
+@using Hardware4You.Data.User
+@inject UserService UserService
 
 <h3>Logout</h3>
 <button type="button" class="btn btn-success" @onclick="LogoutAsync">Logout</button>
@@ -10,6 +11,6 @@
 @code {
     public async Task LogoutAsync()
     {
-        await UserAuthenticationStateProvider.LogoutAsync();
+        await UserService.LogoutAsync();
     }
 }

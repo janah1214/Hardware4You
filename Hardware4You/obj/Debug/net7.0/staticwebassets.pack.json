@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Hardware4You.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\Images\\iphone.png",
+      "PackagePath": "staticwebassets\\Images\\iphone.png"
+    },
+    {
       "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\Images\\macbook.jpg",
       "PackagePath": "staticwebassets\\Images\\macbook.jpg"
     },
@@ -15,6 +19,10 @@
     {
       "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\Logo.svg",
       "PackagePath": "staticwebassets\\Logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\SQLcreateTables.txt",
+      "PackagePath": "staticwebassets\\SQLcreateTables.txt"
     },
     {
       "Id": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\app.css",

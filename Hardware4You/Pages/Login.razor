@@ -2,8 +2,9 @@
 @attribute [AllowAnonymous]
 
 @using Hardware4You.Data
+@using Hardware4You.Data.User
 @using MudBlazor
-@inject UserAuthenticationStateProvider UserAuthenticationStateProvider
+@inject UserService UserService
 
 <h3>Login</h3>
 
@@ -40,6 +41,6 @@
 
     public async Task LoginAsync()
     {
-        await UserAuthenticationStateProvider.LoginAsync(Username, Password);
+        await UserService.LoginAsync(Username, Password);
     }
 }

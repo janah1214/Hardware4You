@@ -1,29 +1,30 @@
 ﻿using Hardware4You.Models;
 using Microsoft.AspNetCore.Components.Authorization;
+using System.Data;
 using System.Security.Claims;
 
 namespace Hardware4You.Data
 {
     public class UserAuthenticationStateProvider : AuthenticationStateProvider, IDisposable
     {
-        private readonly UserService _userService;
+        private readonly UserAuthenticationService _userAuthenticationService;
 
-        public User CurrentUser { get; private set; } = new();
+        public UserAuthenticate CurrentUser { get; private set; } = new();
 
-        public UserAuthenticationStateProvider(UserService userService)
+        public UserAuthenticationStateProvider(UserAuthenticationService userAuthService)
         {
-            _userService = userService;
+            _userAuthenticationService = userAuthService;
             AuthenticationStateChanged += OnAuthenticationStateChangedAsync;
         }
 
         public async Task LoginAsync(string username, string password)
         {
             var principal = new ClaimsPrincipal();
-            var user = _userService.LookupUserInDatabase(username, password);
+            var user = _userAuthenticationService.LookupUserInDatabase(username, password);
 
             if (user is not null)
             {
-                await _userService.PersistUserToBrowserAsync(user);
+                await _userAuthenticationService.PersistUserToBrowserAsync(user);
                 principal = user.ToClaimsPrincipal();
             }
 
@@ -32,18 +33,18 @@ namespace Hardware4You.Data
 
         public async Task LogoutAsync()
         {
-            await _userService.ClearBrowserUserDataAsync();
+            await _userAuthenticationService.ClearBrowserUserDataAsync();
             NotifyAuthenticationStateChanged(Task.FromResult(new AuthenticationState(new())));
         }
 
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
             var principal = new ClaimsPrincipal();
-            var user = await _userService.FetchUserFromBrowserAsync();
-
+            var user = await _userAuthenticationService.FetchUserFromBrowserAsync();
+            
             if (user is not null)
             {
-                var userInDatabase = _userService.LookupUserInDatabase(user.Username, user.Password);
+                var userInDatabase = _userAuthenticationService.LookupUserInDatabase(user.Username, user.Password);
 
                 if (userInDatabase is not null)
                 {
@@ -61,7 +62,7 @@ namespace Hardware4You.Data
 
             if (authenticationState is not null)
             {
-                CurrentUser = User.FromClaimsPrincipal(authenticationState.User);
+                CurrentUser = UserAuthenticate.FromClaimsPrincipal(authenticationState.User);
             }
         }
 

@@ -1,0 +1,70 @@
+﻿@page "/users"
+@attribute [Authorize(Roles = "admin")]
+
+@using Hardware4You.Data
+@using Hardware4You.Data.User
+@using Hardware4You.Models
+@using Syncfusion.Blazor.Grids
+@inject UserService UserService
+
+<PageTitle>Admin</PageTitle>
+
+<h3>Verwaltung Benutzer</h3>
+<br />
+<SfGrid DataSource="@ListUsers" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" TValue="User">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="User"></GridEvents>
+    <GridColumns>
+        <GridColumn Field="@nameof(User.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(User.Username)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(User.Password)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(User.Role)" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public IEnumerable<User> ListUsers { get; set; } = null!;
+
+    protected override void OnInitialized()
+    {
+        ListUsers = UserService.GetListUser();
+    }
+
+    public void ActionBeginHandler(ActionEventArgs<User> Args)
+    {
+        //Will be triggered when CRUD action is initiated
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            if (Args.Action == "Add")
+            {
+                // Insert the changes into your database here.
+                UserService.InsertUser(Args.Data);
+            }
+        }
+
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            if (Args.Action == "Edit")
+            {
+                //Update the changes into your database here.
+                UserService.UpdateUser(Args.Data.Id, Args.Data);
+            }
+        }
+
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
+        {
+            //Remove the record from your database
+            UserService.DeleteUser(Args.Data.Id);
+        }
+    }
+
+    public void ActionCompleteHandler(ActionEventArgs<User> Args)
+    {
+        //will be triggered when CRUD action is complete.
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            ListUsers = UserService.GetListUser(); //to fetch the updated data from db to Grid
+        }
+    }
+
+}

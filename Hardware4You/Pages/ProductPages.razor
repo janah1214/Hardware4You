@@ -35,8 +35,6 @@
     [Parameter]
     public IEnumerable<Product> Products { get; set; } = null!;
 
-    Justify justification = Justify.FlexStart;
-
     protected override void OnInitialized()
     {
         Products = ProductService.GetProducts();

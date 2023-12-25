@@ -17,13 +17,6 @@
 
 <div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
     <nav class="flex-column" id="navmenuicons">
-        <!--Menüleiste Startseite-->
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Startseite
-            </NavLink>
-        </div>
-
         <AuthorizeView>
             <Authorizing>
                 <div>Laden...</div>
@@ -39,11 +32,19 @@
 
         <AuthorizeView Roles="standard">
             <Authorized>
+                <!--Menüleiste Startseite-->
                 <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Startseite
+                    </NavLink>
+                </div>
+
+                <!--Menüleiste Warenkorb: ausgeblendet-->
+                <!--<div class="nav-item px-3">
                     <NavLink class="nav-link" href="/ShoppingCart">
                         <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span>Warenkorb
                     </NavLink>
-                </div>
+                </div>-->
 
                 @foreach (var productCat in ProductCategories)
                 {
@@ -66,6 +67,11 @@
                 <div class="nav-item px-3">
                     <NavLink class="nav-link" href="/productcategories">
                         <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Produktkategorien
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="/users">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Benutzer
                     </NavLink>
                 </div>
             </Authorized>
