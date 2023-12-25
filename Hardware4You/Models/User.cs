@@ -1,6 +1,4 @@
-﻿using System.Security.Claims;
-
-namespace Hardware4You.Models
+﻿namespace Hardware4You.Models
 {
     public class User
     {

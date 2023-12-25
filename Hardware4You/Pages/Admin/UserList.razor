@@ -32,12 +32,10 @@
 
     public void ActionBeginHandler(ActionEventArgs<User> Args)
     {
-        //Will be triggered when CRUD action is initiated
         if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
         {
             if (Args.Action == "Add")
             {
-                // Insert the changes into your database here.
                 UserService.InsertUser(Args.Data);
             }
         }
@@ -46,24 +44,21 @@
         {
             if (Args.Action == "Edit")
             {
-                //Update the changes into your database here.
                 UserService.UpdateUser(Args.Data.Id, Args.Data);
             }
         }
 
         if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
         {
-            //Remove the record from your database
             UserService.DeleteUser(Args.Data.Id);
         }
     }
 
     public void ActionCompleteHandler(ActionEventArgs<User> Args)
     {
-        //will be triggered when CRUD action is complete.
         if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
         {
-            ListUsers = UserService.GetListUser(); //to fetch the updated data from db to Grid
+            ListUsers = UserService.GetListUser();
         }
     }
 
