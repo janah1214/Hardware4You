@@ -11,22 +11,12 @@ namespace Hardware4You.Data.ShoppingCart
         public void AddProductToCart(long productId, List<Product> products)
         {
             var product = products.First(p => p.Id == productId);
-
-            // TODO: Wenn anz pro kategorie haben möchte
-            //if (SelectedItems.Contains(product) is false)
-            //{
             SelectedItems.Add(product);
-
-            //}
         }
 
-        public void BuyProductsInCart(List<Product> products)
+        public void BuyProductInCart(Product product)
         {
-            foreach (var product in products)
-            {
-                product.Quantity -= 1;
-            }
-
+            product.Quantity -= 1;
         }
     }
 }

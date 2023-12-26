@@ -1,0 +1,68 @@
+﻿@page "/buyinghistory"
+@attribute [Authorize(Roles = "admin")]
+
+@using Hardware4You.Data
+@using Hardware4You.Models
+@using Syncfusion.Blazor.Grids
+@inject IBuyingHistoryService BuyingHistoryService
+
+<PageTitle>Bestellungen</PageTitle>
+
+<h3>Bestellhistory</h3>
+<br />
+<SfGrid DataSource="@ListBuyingHistory" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" TValue="Models.BuyingHistory">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Models.BuyingHistory"></GridEvents>
+    <GridColumns>
+        <GridColumn Field="@nameof(Models.BuyingHistory.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false" Width="10"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.Name)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.Street)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.ZIPCode)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.City)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.ProductId)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.PickupDate)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.TimeStamp)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.State)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.User)" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public IEnumerable<Models.BuyingHistory> ListBuyingHistory { get; set; } = null!;
+
+    protected override void OnInitialized()
+    {
+        ListBuyingHistory = BuyingHistoryService.GetListBuyingHistory();
+    }
+    public void ActionBeginHandler(ActionEventArgs<Models.BuyingHistory> Args)
+    {
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            if (Args.Action == "Add")
+            {
+                BuyingHistoryService.InsertBuyingHistory(Args.Data);
+            }
+        }
+
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            if (Args.Action == "Edit")
+            {
+                BuyingHistoryService.UpdateBuyingHistory(Args.Data.Id, Args.Data);
+            }
+        }
+
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
+        {
+            BuyingHistoryService.DeleteBuyingHistory(Args.Data.Id);
+        }
+    }
+    public void ActionCompleteHandler(ActionEventArgs<Models.BuyingHistory> Args)
+    {
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            ListBuyingHistory = BuyingHistoryService.GetListBuyingHistory();
+        }
+    }
+
+}

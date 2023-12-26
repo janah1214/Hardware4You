@@ -12,6 +12,7 @@ builder.Services.AddMudServices();
 
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductCategoryService, ProductCategoryService>();
+builder.Services.AddScoped<IBuyingHistoryService, BuyingHistoryService>();
 builder.Services.AddScoped<CartService>();
 
 builder.Services.AddDbContext<ProductContext>(option =>
@@ -21,6 +22,9 @@ builder.Services.AddDbContext<ProductCategoryContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("HardwareDatabase")));
 
 builder.Services.AddDbContext<UserContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("HardwareDatabase")));
+
+builder.Services.AddDbContext<BuyingHistoryContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("HardwareDatabase")));
 
 builder.Services.AddScoped<UserService>();

@@ -42,9 +42,7 @@ namespace Hardware4You.Data
         {
             try
             {
-                //TODO code nicer
                 product.Id = _context.Products.Count() + 1;
-
                 _context.Products.Add(product);
                 _context.SaveChanges();
             }

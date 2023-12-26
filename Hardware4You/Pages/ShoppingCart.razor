@@ -6,39 +6,45 @@
 @using Hardware4You.Models
 @using MudBlazor
 @inject CartService CartService
+@inject IProductService ProductService
+@inject IBuyingHistoryService BuyingHistoryService
 
 <h3>Warenkorb</h3>
 
 @if (Products.Count() > 0)
 {
-    <br><h4>Du hast @Products.Count() Artikel im Warenkorb:</h4>
+    <br><h4>Du hast @Products.Count() Artikel im Warenkorb</h4>
 
     <MudPaper Class="d-flex flex-wrap gap-4" Elevation="0">
         @foreach (var product in Products)
         {
-            <MudPaper Class="mud-theme-primary" Width="256px" Height="350px" src="@product.ImageURL">
+            <MudPaper Class="mud-theme-primary" Width="156px" Height="250px" src="@product.ImageURL">
                 <img src="@product.ImageURL" class="card-img">
-                <h5 class="card-title">@product.Name</h5>
+                <h6 class="card-title">@product.Name</h6>
                 <blockquote class="card-text">@product.Price CHF</blockquote>
             </MudPaper>
         }
     </MudPaper>
 
-    @if (DisplayCheckoutButton)
-    {
-        <!--<a href="/ShoppingCart/Checkout" class="btn btn-primary" type="button">
-            <MudIcon Icon="@Icons.Material.Filled.ShoppingCartCheckout" /> Artikel kaufen
-        </a>-->
+    <br>
+    <h6><b>Totalbetrag: @TotalPrice CHF</b></h6>
+    <hr /><br />
+    <h4>Lieferadresse</h4>
+    <MudTextField @bind-Value="Name" Label="Vorname / Nachname *" Variant="Variant.Text" InputType="InputType.Text" Adornment="Adornment.Start" />
+    <MudTextField @bind-Value="Street" Label="Strasse *" Variant="Variant.Text" InputType="InputType.Text" Adornment="Adornment.Start" />
+    <MudTextField @bind-Value="ZIPCode" Label="PLZ *" Variant="Variant.Text" InputType="InputType.Text" Adornment="Adornment.Start" />
+    <MudTextField @bind-Value="City" Label="Stadt *" Variant="Variant.Text" InputType="InputType.Text" Adornment="Adornment.Start" />
 
+    @if (Name != null && Street != null && ZIPCode != null && City != null)
+    {
         <button class="btn btn-primary" type="button" @onclick="() => Checkout(Products.ToList())">
-            <MudIcon Icon="@Icons.Material.Filled.ShoppingCartCheckout" /> Endgültig kaufen
+            <MudIcon Icon="@Icons.Material.Filled.ShoppingCartCheckout" /> Kaufen
         </button>
 
         @if (ClickedOnCheckoutButton)
         {
-            <ShoppingCartCheckout TestInput="Testoutput">
-                checkout details
-            </ShoppingCartCheckout>
+            <p>Danke für deine Bestellung.</p>
+            <!--TODO: navigate to home and empty warenkorb-->
         }
     }
 }
@@ -48,26 +54,62 @@ else
 }
 
 @code {
-    public string Testoutput { get; set; } = "testoutput";
-
     public IEnumerable<Product> Products { get; set; } = null!;
 
-    public bool DisplayCheckoutButton { get; set; } = false;
-
     public bool ClickedOnCheckoutButton { get; set; } = false;
+
+    public int TotalPrice { get; set; } = 0;
+
+    public string Name { get; set; }
+
+    public string Street { get; set; }
+
+    public string ZIPCode { get; set; }
+
+    public string City { get; set; }
+
+    public string ProductId { get; set; }
 
     protected override void OnInitialized()
     {
         Products = CartService.SelectedItems;
 
-        if(Products.Count() > 0)
+        foreach(var p in Products)
         {
-            DisplayCheckoutButton = true;
+            TotalPrice += p.Price;
+            ProductId += p.Id + ";";
         }
     }
 
     private void Checkout(List<Product> products)
     {
+        foreach(var p in products)
+        {
+            CartService.BuyProductInCart(p);
+            ProductService.UpdateProduct(p.Id, p);
+        }
+        
+        var buyinghistory = CreateBuyingHistory();
+
+        BuyingHistoryService.InsertBuyingHistory(buyinghistory);
         ClickedOnCheckoutButton = true;
+    }
+
+    private BuyingHistory CreateBuyingHistory()
+    {
+        BuyingHistory data = new BuyingHistory()
+            {
+                Name = Name,
+                Street = Street,
+                ZIPCode = ZIPCode,
+                City = City,
+                ProductId = ProductId,
+                PickupDate = DateTime.Today.AddDays(14),
+                TimeStamp = DateTime.Now,
+                State = "Offen",
+                User = ""
+            };
+
+        return data;
     }
 }
