@@ -40,17 +40,19 @@
         <button class="btn btn-primary" type="button" @onclick="() => Checkout(Products.ToList())">
             <MudIcon Icon="@Icons.Material.Filled.ShoppingCartCheckout" /> Kaufen
         </button>
-
-        @if (ClickedOnCheckoutButton)
-        {
-            <p>Danke für deine Bestellung.</p>
-            <!--TODO: navigate to home and empty warenkorb-->
-        }
     }
 }
 else
 {
-    <br><h4>Du hast keine Artikel im Warenkorb.</h4>
+    @if (ClickedOnCheckoutButton)
+    {
+        <br /><p>Dein Warenkorb wurde geleert.</p>
+        <br /><p>Danke für deine Bestellung!</p>
+    }
+    else
+    {
+        <br><h4>Du hast keine Artikel im Warenkorb.</h4>
+    }
 }
 
 @code {
@@ -88,10 +90,11 @@ else
             CartService.BuyProductInCart(p);
             ProductService.UpdateProduct(p.Id, p);
         }
-        
-        var buyinghistory = CreateBuyingHistory();
 
+        var buyinghistory = CreateBuyingHistory();
         BuyingHistoryService.InsertBuyingHistory(buyinghistory);
+
+        Products = CartService.SelectedItems = new();
         ClickedOnCheckoutButton = true;
     }
 
@@ -104,6 +107,7 @@ else
                 ZIPCode = ZIPCode,
                 City = City,
                 ProductId = ProductId,
+                // TODO: Logik Pickupdate einbauen
                 PickupDate = DateTime.Today.AddDays(14),
                 TimeStamp = DateTime.Now,
                 State = "Offen",
