@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1TMkaaNKvGM3hK816cNOJi5ZnGpp/GzDCh7igcX6W9Q=",
+  "Hash": "qLvcTQ+sGOL63ztdPF5AuP2KQt71PZ+MBBA0dH9Y/Vc=",
   "Source": "Hardware4You",
   "BasePath": "_content/Hardware4You",
   "Mode": "Default",
@@ -321,25 +321,6 @@
       "OriginalItemSpec": "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.core\\23.2.7\\staticwebassets\\scripts\\svgbase.min.js"
     },
     {
-      "Identity": "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.core\\23.2.7\\staticwebassets\\scripts\\syncfusion-blazor.min.js",
-      "SourceId": "Syncfusion.Blazor.Core",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.core\\23.2.7\\staticwebassets\\",
-      "BasePath": "_content/Syncfusion.Blazor.Core",
-      "RelativePath": "scripts/syncfusion-blazor.min.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.core\\23.2.7\\staticwebassets\\scripts\\syncfusion-blazor.min.js"
-    },
-    {
       "Identity": "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.core\\23.2.7\\staticwebassets\\scripts\\syncfusion-blazor-base.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
@@ -376,6 +357,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.core\\23.2.7\\staticwebassets\\scripts\\syncfusion-blazor-extended.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.core\\23.2.7\\staticwebassets\\scripts\\syncfusion-blazor.min.js",
+      "SourceId": "Syncfusion.Blazor.Core",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.core\\23.2.7\\staticwebassets\\",
+      "BasePath": "_content/Syncfusion.Blazor.Core",
+      "RelativePath": "scripts/syncfusion-blazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.core\\23.2.7\\staticwebassets\\scripts\\syncfusion-blazor.min.js"
     },
     {
       "Identity": "C:\\Users\\janah\\.nuget\\packages\\syncfusion.blazor.data\\23.2.7\\staticwebassets\\scripts\\data.min.js",
@@ -1119,6 +1119,25 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Identity": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "Hardware4You",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "BasePath": "_content/Hardware4You",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
+    },
+    {
       "Identity": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
@@ -1233,25 +1252,6 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "Hardware4You",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
-      "BasePath": "_content/Hardware4You",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
-    },
-    {
       "Identity": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
@@ -1347,6 +1347,25 @@
       "OriginalItemSpec": "wwwroot\\Images\\macbook.jpg"
     },
     {
+      "Identity": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\logo_weiss.png",
+      "SourceId": "Hardware4You",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
+      "BasePath": "_content/Hardware4You",
+      "RelativePath": "logo_weiss.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo_weiss.png"
+    },
+    {
       "Identity": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\Logo.png",
       "SourceId": "Hardware4You",
       "SourceType": "Discovered",
@@ -1383,25 +1402,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Logo.svg"
-    },
-    {
-      "Identity": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\logo_weiss.png",
-      "SourceId": "Hardware4You",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\",
-      "BasePath": "_content/Hardware4You",
-      "RelativePath": "logo_weiss.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\logo_weiss.png"
     },
     {
       "Identity": "C:\\Users\\janah\\Desktop\\Git\\Hardware4You\\Hardware4You\\wwwroot\\SQLcreateTables.txt",

@@ -26,16 +26,16 @@ CREATE TABLE [dbo].[User] (
 );
 
 CREATE TABLE [dbo].[BuyingHistory] (
-    [Id]        BIGINT NOT NULL,
-    [Name]      TEXT   NULL,
-    [Street]    TEXT   NULL,
-    [ZIPCode]   TEXT    NULL,
-    [City]      TEXT   NULL,
-    [ProductId] TEXT   NULL,
-    [PickupDate] DATETIME NULL, 
-    [TimeStamp] TIMESTAMP NULL, 
-    [State] TEXT NULL, 
-    [User] TEXT NULL, 
+    [Id]         BIGINT   NOT NULL,
+    [Name]       TEXT     NULL,
+    [Street]     TEXT     NULL,
+    [ZIPCode]    TEXT     NULL,
+    [City]       TEXT     NULL,
+    [ProductId]  TEXT     NULL,
+    [PickupDate] DATETIME NULL,
+    [TimeStamp]  DATETIME NULL,
+    [State]      TEXT     NULL,
+    [User]       TEXT     NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

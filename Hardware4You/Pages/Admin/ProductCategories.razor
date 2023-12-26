@@ -14,7 +14,7 @@
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="ProductCategory"></GridEvents>
     <GridColumns>
-        <GridColumn Field="@nameof(ProductCategory.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="true" Width="10"></GridColumn>
+        <GridColumn Field="@nameof(ProductCategory.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false" Width="10"></GridColumn>
         <GridColumn Field="@nameof(ProductCategory.Name)" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
