@@ -14,12 +14,12 @@
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Product"></GridEvents>
     <GridColumns>
-        <GridColumn Field="@nameof(Product.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Product.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="true" Width="40"></GridColumn>
         <GridColumn Field="@nameof(Product.Name)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Product.Description)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Product.ImageURL)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Product.Price)" Width="50"></GridColumn>
-        <GridColumn Field="@nameof(Product.Quantity)" Width="50"></GridColumn>
+        <GridColumn Field="@nameof(Product.Description)" HeaderText="Beschreibung" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Product.ImageURL)" HeaderText="Bild URL" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Product.Price)" HeaderText="Preis" Width="50"></GridColumn>
+        <GridColumn Field="@nameof(Product.Quantity)" HeaderText="Anzahl" Width="50"></GridColumn>
         <GridColumn Field="@nameof(Product.CategoryId)" Width="50"></GridColumn>
     </GridColumns>
 </SfGrid>

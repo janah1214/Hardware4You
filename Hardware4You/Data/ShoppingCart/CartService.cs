@@ -11,12 +11,15 @@ namespace Hardware4You.Data.ShoppingCart
         public void AddProductToCart(long productId, List<Product> products)
         {
             var product = products.First(p => p.Id == productId);
+
+            // reservation anz products -1
+            product.Quantity -= 1;
             SelectedItems.Add(product);
         }
 
         public void BuyProductInCart(Product product)
         {
-            product.Quantity -= 1;
+            //product.Quantity -= 1;
         }
     }
 }

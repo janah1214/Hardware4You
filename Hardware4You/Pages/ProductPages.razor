@@ -11,19 +11,21 @@
 
 <MudPaper Class="d-flex flex-wrap gap-4" Elevation="0">
 
-    @foreach (var product in Products)
+@foreach (var product in Products)
+{
+    // Kontrolle Produkt pro Kategorie & Anzahl verfügbare Produkte > 0
+    if (product.CategoryId == Cat && product.Quantity > 0)
     {
-        if(product.CategoryId == Cat)
-        {
-            <a class="" href="/products/@Cat/@product.Id">
-                <MudPaper Class="mud-theme-primary" Width="256px" Height="350px" src="@product.ImageURL">
-                    <img src="@product.ImageURL" class="card-img">
-                    <h5 class="card-title">@product.Name</h5>
-                    <blockquote class="card-text">@product.Price CHF</blockquote>
-                </MudPaper>
-            </a>
-        }
+        <a class="" href="/products/@Cat/@product.Id
+        ">
+            <MudPaper Class="mud-theme-primary" Width="256px" Height="350px" src="@product.ImageURL">
+                <img src="@product.ImageURL" class="card-img">
+                <h5 class="card-title">@product.Name</h5>
+                <blockquote class="card-text">@product.Price CHF</blockquote>
+            </MudPaper>
+        </a>
     }
+}
 
 </MudPaper>
 

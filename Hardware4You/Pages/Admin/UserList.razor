@@ -16,9 +16,9 @@
     <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="User"></GridEvents>
     <GridColumns>
         <GridColumn Field="@nameof(User.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
-        <GridColumn Field="@nameof(User.Username)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(User.Password)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(User.Role)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(User.Username)" HeaderText="Benutzername" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(User.Password)" HeaderText="Passwort" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(User.Role)" HeaderText="Rolle" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 

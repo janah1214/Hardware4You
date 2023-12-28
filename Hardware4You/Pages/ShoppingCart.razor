@@ -33,11 +33,17 @@
     <MudTextField @bind-Value="Name" Label="Vorname / Nachname *" Variant="Variant.Text" InputType="InputType.Text" Adornment="Adornment.Start" />
     <MudTextField @bind-Value="Street" Label="Strasse *" Variant="Variant.Text" InputType="InputType.Text" Adornment="Adornment.Start" />
     <MudTextField @bind-Value="ZIPCode" Label="PLZ *" Variant="Variant.Text" InputType="InputType.Text" Adornment="Adornment.Start" />
-    <MudTextField @bind-Value="City" Label="Stadt *" Variant="Variant.Text" InputType="InputType.Text" Adornment="Adornment.Start" />
+    <MudTextField @bind-Value="City" Label="Stadt *" Variant="Variant.Text" InputType="InputType.Text" Adornment="Adornment.Start" /><br />
 
     @if (Name != null && Street != null && ZIPCode != null && City != null)
     {
         <button class="btn btn-primary" type="button" @onclick="() => Checkout(Products.ToList())">
+            <MudIcon Icon="@Icons.Material.Filled.ShoppingCartCheckout" /> Kaufen
+        </button>
+    }
+    else
+    {
+        <button class="btn btn-primary" style="background-color: lightgray" type="button">
             <MudIcon Icon="@Icons.Material.Filled.ShoppingCartCheckout" /> Kaufen
         </button>
     }

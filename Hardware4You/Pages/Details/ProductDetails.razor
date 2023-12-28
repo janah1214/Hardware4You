@@ -20,9 +20,9 @@
         <p>Name: @product.Name</p>
         <p>Beschreibung: @product.Description</p>
         <p>Preis: @product.Price</p>
-        <p>Anz: @product.Quantity</p>
+        <p>Anzahl: @product.Quantity</p>
 
-        @if (DisplayBuyButton)
+        @if (product.Quantity > 0)
         {
             <button class="btn btn-primary" type="button" @onclick="() => Buy(product.Id, Products.ToList())">
                 <MudIcon Icon="@Icons.Material.Filled.AddShoppingCart" Title="Einloggen" /> Warenkorb hinzufügen
@@ -47,9 +47,6 @@
     [EditorRequired]
     [Parameter]
     public IEnumerable<Product> Products { get; set; } = null!;
-
-    [Parameter]
-    public bool DisplayBuyButton { get; set; } = true;
 
     public bool ClickedOnBuyingButton { get; set; } = false;
 

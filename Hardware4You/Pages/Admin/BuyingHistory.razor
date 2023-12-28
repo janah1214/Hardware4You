@@ -16,14 +16,14 @@
     <GridColumns>
         <GridColumn Field="@nameof(Models.BuyingHistory.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false" Width="10"></GridColumn>
         <GridColumn Field="@nameof(Models.BuyingHistory.Name)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Models.BuyingHistory.Street)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Models.BuyingHistory.ZIPCode)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Models.BuyingHistory.City)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.Street)" HeaderText="Strasse" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.ZIPCode)" HeaderText="PLZ" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.City)" HeaderText="Stadt" Width="100"></GridColumn>
         <GridColumn Field="@nameof(Models.BuyingHistory.ProductId)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Models.BuyingHistory.PickupDate)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.PickupDate)" HeaderText="Abholdatum" Width="100"></GridColumn>
         <GridColumn Field="@nameof(Models.BuyingHistory.TimeStamp)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Models.BuyingHistory.State)" Width="100"></GridColumn>
-        <GridColumn Field="@nameof(Models.BuyingHistory.User)" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.State)" HeaderText="Status" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(Models.BuyingHistory.User)" HeaderText="Benutzer" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
